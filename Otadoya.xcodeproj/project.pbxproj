@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
+		FD29217F1E30ED8C0042C052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217E1E30ED8C0042C052 /* ViewController.swift */; };
+		FD2921821E30ED8C0042C052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2921801E30ED8C0042C052 /* Main.storyboard */; };
+		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
+		FD2921871E30ED8C0042C052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2921851E30ED8C0042C052 /* LaunchScreen.storyboard */; };
+		FD2921921E30ED8C0042C052 /* OtadoyaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2921911E30ED8C0042C052 /* OtadoyaTests.swift */; };
+		FD29219D1E30ED8C0042C052 /* OtadoyaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29219C1E30ED8C0042C052 /* OtadoyaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD29218E1E30ED8C0042C052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD2921711E30ED8B0042C052 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD2921781E30ED8B0042C052;
+			remoteInfo = Otadoya;
+		};
+		FD2921991E30ED8C0042C052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD2921711E30ED8B0042C052 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD2921781E30ED8B0042C052;
+			remoteInfo = Otadoya;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD29217C1E30ED8C0042C052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD29217E1E30ED8C0042C052 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD2921811E30ED8C0042C052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD2921831E30ED8C0042C052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD2921861E30ED8C0042C052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD2921881E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD29218D1E30ED8C0042C052 /* OtadoyaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtadoyaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2921911E30ED8C0042C052 /* OtadoyaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtadoyaTests.swift; sourceTree = "<group>"; };
+		FD2921931E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2921981E30ED8C0042C052 /* OtadoyaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtadoyaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD29219C1E30ED8C0042C052 /* OtadoyaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtadoyaUITests.swift; sourceTree = "<group>"; };
+		FD29219E1E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD2921761E30ED8B0042C052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD29218A1E30ED8C0042C052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD2921951E30ED8C0042C052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD2921701E30ED8B0042C052 = {
+			isa = PBXGroup;
+			children = (
+				FD29217B1E30ED8C0042C052 /* Otadoya */,
+				FD2921901E30ED8C0042C052 /* OtadoyaTests */,
+				FD29219B1E30ED8C0042C052 /* OtadoyaUITests */,
+				FD29217A1E30ED8C0042C052 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD29217A1E30ED8C0042C052 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD2921791E30ED8C0042C052 /* Otadoya.app */,
+				FD29218D1E30ED8C0042C052 /* OtadoyaTests.xctest */,
+				FD2921981E30ED8C0042C052 /* OtadoyaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD29217B1E30ED8C0042C052 /* Otadoya */ = {
+			isa = PBXGroup;
+			children = (
+				FD29217C1E30ED8C0042C052 /* AppDelegate.swift */,
+				FD29217E1E30ED8C0042C052 /* ViewController.swift */,
+				FD2921801E30ED8C0042C052 /* Main.storyboard */,
+				FD2921831E30ED8C0042C052 /* Assets.xcassets */,
+				FD2921851E30ED8C0042C052 /* LaunchScreen.storyboard */,
+				FD2921881E30ED8C0042C052 /* Info.plist */,
+			);
+			path = Otadoya;
+			sourceTree = "<group>";
+		};
+		FD2921901E30ED8C0042C052 /* OtadoyaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD2921911E30ED8C0042C052 /* OtadoyaTests.swift */,
+				FD2921931E30ED8C0042C052 /* Info.plist */,
+			);
+			path = OtadoyaTests;
+			sourceTree = "<group>";
+		};
+		FD29219B1E30ED8C0042C052 /* OtadoyaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD29219C1E30ED8C0042C052 /* OtadoyaUITests.swift */,
+				FD29219E1E30ED8C0042C052 /* Info.plist */,
+			);
+			path = OtadoyaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD2921781E30ED8B0042C052 /* Otadoya */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD2921A11E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "Otadoya" */;
+			buildPhases = (
+				FD2921751E30ED8B0042C052 /* Sources */,
+				FD2921761E30ED8B0042C052 /* Frameworks */,
+				FD2921771E30ED8B0042C052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Otadoya;
+			productName = Otadoya;
+			productReference = FD2921791E30ED8C0042C052 /* Otadoya.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD29218C1E30ED8C0042C052 /* OtadoyaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD2921A41E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaTests" */;
+			buildPhases = (
+				FD2921891E30ED8C0042C052 /* Sources */,
+				FD29218A1E30ED8C0042C052 /* Frameworks */,
+				FD29218B1E30ED8C0042C052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD29218F1E30ED8C0042C052 /* PBXTargetDependency */,
+			);
+			name = OtadoyaTests;
+			productName = OtadoyaTests;
+			productReference = FD29218D1E30ED8C0042C052 /* OtadoyaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD2921971E30ED8C0042C052 /* OtadoyaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD2921A71E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaUITests" */;
+			buildPhases = (
+				FD2921941E30ED8C0042C052 /* Sources */,
+				FD2921951E30ED8C0042C052 /* Frameworks */,
+				FD2921961E30ED8C0042C052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD29219A1E30ED8C0042C052 /* PBXTargetDependency */,
+			);
+			name = OtadoyaUITests;
+			productName = OtadoyaUITests;
+			productReference = FD2921981E30ED8C0042C052 /* OtadoyaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD2921711E30ED8B0042C052 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Dmitry Pilikov";
+				TargetAttributes = {
+					FD2921781E30ED8B0042C052 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					FD29218C1E30ED8C0042C052 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FD2921781E30ED8B0042C052;
+					};
+					FD2921971E30ED8C0042C052 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FD2921781E30ED8B0042C052;
+					};
+				};
+			};
+			buildConfigurationList = FD2921741E30ED8B0042C052 /* Build configuration list for PBXProject "Otadoya" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD2921701E30ED8B0042C052;
+			productRefGroup = FD29217A1E30ED8C0042C052 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD2921781E30ED8B0042C052 /* Otadoya */,
+				FD29218C1E30ED8C0042C052 /* OtadoyaTests */,
+				FD2921971E30ED8C0042C052 /* OtadoyaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD2921771E30ED8B0042C052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD2921871E30ED8C0042C052 /* LaunchScreen.storyboard in Resources */,
+				FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */,
+				FD2921821E30ED8C0042C052 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD29218B1E30ED8C0042C052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD2921961E30ED8C0042C052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD2921751E30ED8B0042C052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD29217F1E30ED8C0042C052 /* ViewController.swift in Sources */,
+				FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD2921891E30ED8C0042C052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD2921921E30ED8C0042C052 /* OtadoyaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD2921941E30ED8C0042C052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD29219D1E30ED8C0042C052 /* OtadoyaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD29218F1E30ED8C0042C052 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD2921781E30ED8B0042C052 /* Otadoya */;
+			targetProxy = FD29218E1E30ED8C0042C052 /* PBXContainerItemProxy */;
+		};
+		FD29219A1E30ED8C0042C052 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD2921781E30ED8B0042C052 /* Otadoya */;
+			targetProxy = FD2921991E30ED8C0042C052 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD2921801E30ED8C0042C052 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD2921811E30ED8C0042C052 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD2921851E30ED8C0042C052 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD2921861E30ED8C0042C052 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD29219F1E30ED8C0042C052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD2921A01E30ED8C0042C052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD2921A21E30ED8C0042C052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Otadoya/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.Otadoya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FD2921A31E30ED8C0042C052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Otadoya/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.Otadoya;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FD2921A51E30ED8C0042C052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OtadoyaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otadoya.app/Otadoya";
+			};
+			name = Debug;
+		};
+		FD2921A61E30ED8C0042C052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OtadoyaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otadoya.app/Otadoya";
+			};
+			name = Release;
+		};
+		FD2921A81E30ED8C0042C052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OtadoyaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Otadoya;
+			};
+			name = Debug;
+		};
+		FD2921A91E30ED8C0042C052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OtadoyaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Otadoya;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD2921741E30ED8B0042C052 /* Build configuration list for PBXProject "Otadoya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD29219F1E30ED8C0042C052 /* Debug */,
+				FD2921A01E30ED8C0042C052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD2921A11E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "Otadoya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD2921A21E30ED8C0042C052 /* Debug */,
+				FD2921A31E30ED8C0042C052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD2921A41E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD2921A51E30ED8C0042C052 /* Debug */,
+				FD2921A61E30ED8C0042C052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD2921A71E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD2921A81E30ED8C0042C052 /* Debug */,
+				FD2921A91E30ED8C0042C052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD2921711E30ED8B0042C052 /* Project object */;
+}
