@@ -7,46 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30288B911E34F6BC0057AF6D /* dzin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30288B8E1E34F6BC0057AF6D /* dzin.wav */; };
+		30288B921E34F6BC0057AF6D /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30288B8F1E34F6BC0057AF6D /* spring.wav */; };
+		30288B931E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30288B901E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf */; };
+		30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B951E34F9050057AF6D /* UIColor+Custom.swift */; };
+		30288B9B1E34FB9F0057AF6D /* SymbolsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */; };
+		30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9C1E34FBA90057AF6D /* RootVC.swift */; };
+		30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
-		FD29217F1E30ED8C0042C052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217E1E30ED8C0042C052 /* ViewController.swift */; };
-		FD2921821E30ED8C0042C052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2921801E30ED8C0042C052 /* Main.storyboard */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
-		FD2921871E30ED8C0042C052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2921851E30ED8C0042C052 /* LaunchScreen.storyboard */; };
-		FD2921921E30ED8C0042C052 /* OtadoyaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2921911E30ED8C0042C052 /* OtadoyaTests.swift */; };
-		FD29219D1E30ED8C0042C052 /* OtadoyaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29219C1E30ED8C0042C052 /* OtadoyaUITests.swift */; };
+		FD3C30F01E3107450095A127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3C30EF1E3107450095A127 /* Main.storyboard */; };
+		FD3C30F41E3117BE0095A127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C30F31E3117BE0095A127 /* ViewController.swift */; };
+		FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE98BF11E3238E7007D39F6 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FD29218E1E30ED8C0042C052 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD2921711E30ED8B0042C052 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD2921781E30ED8B0042C052;
-			remoteInfo = Otadoya;
-		};
-		FD2921991E30ED8C0042C052 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD2921711E30ED8B0042C052 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD2921781E30ED8B0042C052;
-			remoteInfo = Otadoya;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		30288B8E1E34F6BC0057AF6D /* dzin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dzin.wav; sourceTree = "<group>"; };
+		30288B8F1E34F6BC0057AF6D /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
+		30288B901E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WoodkitPrintPro-Letterpress.ttf"; sourceTree = "<group>"; };
+		30288B951E34F9050057AF6D /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsVC.swift; sourceTree = "<group>"; };
+		30288B9C1E34FBA90057AF6D /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD29217C1E30ED8C0042C052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD29217E1E30ED8C0042C052 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FD2921811E30ED8C0042C052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD2921831E30ED8C0042C052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD2921861E30ED8C0042C052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD2921881E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD29218D1E30ED8C0042C052 /* OtadoyaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtadoyaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD2921911E30ED8C0042C052 /* OtadoyaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtadoyaTests.swift; sourceTree = "<group>"; };
-		FD2921931E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD2921981E30ED8C0042C052 /* OtadoyaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtadoyaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD29219C1E30ED8C0042C052 /* OtadoyaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtadoyaUITests.swift; sourceTree = "<group>"; };
-		FD29219E1E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3C30EF1E3107450095A127 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FD3C30F31E3117BE0095A127 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDE98BF11E3238E7007D39F6 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,29 +46,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD29218A1E30ED8C0042C052 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2921951E30ED8C0042C052 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30288B941E34F8C70057AF6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */,
+				30288B951E34F9050057AF6D /* UIColor+Custom.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		30288B971E34F9690057AF6D /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				30288B991E34F98A0057AF6D /* Font */,
+				30288B981E34F97E0057AF6D /* Sounds */,
+				FD3C30EF1E3107450095A127 /* Main.storyboard */,
+				FD2921881E30ED8C0042C052 /* Info.plist */,
+				FD2921831E30ED8C0042C052 /* Assets.xcassets */,
+			);
+			name = "Supported Files";
+			sourceTree = "<group>";
+		};
+		30288B981E34F97E0057AF6D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				30288B8E1E34F6BC0057AF6D /* dzin.wav */,
+				30288B8F1E34F6BC0057AF6D /* spring.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		30288B991E34F98A0057AF6D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				30288B901E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		30288B9E1E34FBB40057AF6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */,
+				30288B9C1E34FBA90057AF6D /* RootVC.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		FD2921701E30ED8B0042C052 = {
 			isa = PBXGroup;
 			children = (
 				FD29217B1E30ED8C0042C052 /* Otadoya */,
-				FD2921901E30ED8C0042C052 /* OtadoyaTests */,
-				FD29219B1E30ED8C0042C052 /* OtadoyaUITests */,
 				FD29217A1E30ED8C0042C052 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				FD2921791E30ED8C0042C052 /* Otadoya.app */,
-				FD29218D1E30ED8C0042C052 /* OtadoyaTests.xctest */,
-				FD2921981E30ED8C0042C052 /* OtadoyaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,32 +115,14 @@
 		FD29217B1E30ED8C0042C052 /* Otadoya */ = {
 			isa = PBXGroup;
 			children = (
+				30288B9E1E34FBB40057AF6D /* Views */,
+				30288B941E34F8C70057AF6D /* Utils */,
+				30288B971E34F9690057AF6D /* Supported Files */,
 				FD29217C1E30ED8C0042C052 /* AppDelegate.swift */,
-				FD29217E1E30ED8C0042C052 /* ViewController.swift */,
-				FD2921801E30ED8C0042C052 /* Main.storyboard */,
-				FD2921831E30ED8C0042C052 /* Assets.xcassets */,
-				FD2921851E30ED8C0042C052 /* LaunchScreen.storyboard */,
-				FD2921881E30ED8C0042C052 /* Info.plist */,
+				FD3C30F31E3117BE0095A127 /* ViewController.swift */,
+				FDE98BF11E3238E7007D39F6 /* Transition.swift */,
 			);
 			path = Otadoya;
-			sourceTree = "<group>";
-		};
-		FD2921901E30ED8C0042C052 /* OtadoyaTests */ = {
-			isa = PBXGroup;
-			children = (
-				FD2921911E30ED8C0042C052 /* OtadoyaTests.swift */,
-				FD2921931E30ED8C0042C052 /* Info.plist */,
-			);
-			path = OtadoyaTests;
-			sourceTree = "<group>";
-		};
-		FD29219B1E30ED8C0042C052 /* OtadoyaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FD29219C1E30ED8C0042C052 /* OtadoyaUITests.swift */,
-				FD29219E1E30ED8C0042C052 /* Info.plist */,
-			);
-			path = OtadoyaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,42 +145,6 @@
 			productReference = FD2921791E30ED8C0042C052 /* Otadoya.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FD29218C1E30ED8C0042C052 /* OtadoyaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD2921A41E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaTests" */;
-			buildPhases = (
-				FD2921891E30ED8C0042C052 /* Sources */,
-				FD29218A1E30ED8C0042C052 /* Frameworks */,
-				FD29218B1E30ED8C0042C052 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD29218F1E30ED8C0042C052 /* PBXTargetDependency */,
-			);
-			name = OtadoyaTests;
-			productName = OtadoyaTests;
-			productReference = FD29218D1E30ED8C0042C052 /* OtadoyaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FD2921971E30ED8C0042C052 /* OtadoyaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD2921A71E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaUITests" */;
-			buildPhases = (
-				FD2921941E30ED8C0042C052 /* Sources */,
-				FD2921951E30ED8C0042C052 /* Frameworks */,
-				FD2921961E30ED8C0042C052 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD29219A1E30ED8C0042C052 /* PBXTargetDependency */,
-			);
-			name = OtadoyaUITests;
-			productName = OtadoyaUITests;
-			productReference = FD2921981E30ED8C0042C052 /* OtadoyaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,17 +157,8 @@
 				TargetAttributes = {
 					FD2921781E30ED8B0042C052 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 48PPN2BYYW;
 						ProvisioningStyle = Automatic;
-					};
-					FD29218C1E30ED8C0042C052 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FD2921781E30ED8B0042C052;
-					};
-					FD2921971E30ED8C0042C052 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FD2921781E30ED8B0042C052;
 					};
 				};
 			};
@@ -221,8 +176,6 @@
 			projectRoot = "";
 			targets = (
 				FD2921781E30ED8B0042C052 /* Otadoya */,
-				FD29218C1E30ED8C0042C052 /* OtadoyaTests */,
-				FD2921971E30ED8C0042C052 /* OtadoyaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,23 +185,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2921871E30ED8C0042C052 /* LaunchScreen.storyboard in Resources */,
+				30288B921E34F6BC0057AF6D /* spring.wav in Resources */,
 				FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */,
-				FD2921821E30ED8C0042C052 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD29218B1E30ED8C0042C052 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2921961E30ED8C0042C052 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				30288B931E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf in Resources */,
+				30288B911E34F6BC0057AF6D /* dzin.wav in Resources */,
+				FD3C30F01E3107450095A127 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,60 +200,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD29217F1E30ED8C0042C052 /* ViewController.swift in Sources */,
+				30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */,
+				30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */,
+				FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */,
+				30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */,
+				FD3C30F41E3117BE0095A127 /* ViewController.swift in Sources */,
+				30288B9B1E34FB9F0057AF6D /* SymbolsVC.swift in Sources */,
 				FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD2921891E30ED8C0042C052 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD2921921E30ED8C0042C052 /* OtadoyaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD2921941E30ED8C0042C052 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD29219D1E30ED8C0042C052 /* OtadoyaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FD29218F1E30ED8C0042C052 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD2921781E30ED8B0042C052 /* Otadoya */;
-			targetProxy = FD29218E1E30ED8C0042C052 /* PBXContainerItemProxy */;
-		};
-		FD29219A1E30ED8C0042C052 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD2921781E30ED8B0042C052 /* Otadoya */;
-			targetProxy = FD2921991E30ED8C0042C052 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FD2921801E30ED8C0042C052 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD2921811E30ED8C0042C052 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FD2921851E30ED8C0042C052 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD2921861E30ED8C0042C052 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FD29219F1E30ED8C0042C052 /* Debug */ = {
@@ -410,7 +308,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 48PPN2BYYW;
 				INFOPLIST_FILE = Otadoya/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.Otadoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,65 +322,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 48PPN2BYYW;
 				INFOPLIST_FILE = Otadoya/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.Otadoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		FD2921A51E30ED8C0042C052 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OtadoyaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otadoya.app/Otadoya";
-			};
-			name = Debug;
-		};
-		FD2921A61E30ED8C0042C052 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OtadoyaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otadoya.app/Otadoya";
-			};
-			name = Release;
-		};
-		FD2921A81E30ED8C0042C052 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = OtadoyaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Otadoya;
-			};
-			name = Debug;
-		};
-		FD2921A91E30ED8C0042C052 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = OtadoyaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.OtadoyaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Otadoya;
 			};
 			name = Release;
 		};
@@ -503,22 +351,7 @@
 				FD2921A31E30ED8C0042C052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		FD2921A41E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD2921A51E30ED8C0042C052 /* Debug */,
-				FD2921A61E30ED8C0042C052 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		FD2921A71E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "OtadoyaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD2921A81E30ED8C0042C052 /* Debug */,
-				FD2921A91E30ED8C0042C052 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
