@@ -14,14 +14,17 @@
 		30288B9B1E34FB9F0057AF6D /* SymbolsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */; };
 		30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9C1E34FBA90057AF6D /* RootVC.swift */; };
 		30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */; };
+		30288BA41E3505270057AF6D /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288BA31E3505270057AF6D /* SymbolCell.swift */; };
+		30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288BA51E350B4F0057AF6D /* UIFont+Transit.swift */; };
+		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
-		FD3C30F01E3107450095A127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3C30EF1E3107450095A127 /* Main.storyboard */; };
 		FD3C30F41E3117BE0095A127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C30F31E3117BE0095A127 /* ViewController.swift */; };
 		FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE98BF11E3238E7007D39F6 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03246159523A5271C3ABBABB /* Pods-Otadoya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.debug.xcconfig"; sourceTree = "<group>"; };
 		30288B8E1E34F6BC0057AF6D /* dzin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dzin.wav; sourceTree = "<group>"; };
 		30288B8F1E34F6BC0057AF6D /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		30288B901E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WoodkitPrintPro-Letterpress.ttf"; sourceTree = "<group>"; };
@@ -29,11 +32,14 @@
 		30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsVC.swift; sourceTree = "<group>"; };
 		30288B9C1E34FBA90057AF6D /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		30288BA31E3505270057AF6D /* SymbolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
+		30288BA51E350B4F0057AF6D /* UIFont+Transit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Transit.swift"; sourceTree = "<group>"; };
+		98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otadoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.release.xcconfig"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD29217C1E30ED8C0042C052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD2921831E30ED8C0042C052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD2921881E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD3C30EF1E3107450095A127 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FD3C30F31E3117BE0095A127 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDE98BF11E3238E7007D39F6 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,7 @@
 		30288B941E34F8C70057AF6D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				30288BA51E350B4F0057AF6D /* UIFont+Transit.swift */,
 				30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */,
 				30288B951E34F9050057AF6D /* UIColor+Custom.swift */,
 			);
@@ -63,7 +71,6 @@
 			children = (
 				30288B991E34F98A0057AF6D /* Font */,
 				30288B981E34F97E0057AF6D /* Sounds */,
-				FD3C30EF1E3107450095A127 /* Main.storyboard */,
 				FD2921881E30ED8C0042C052 /* Info.plist */,
 				FD2921831E30ED8C0042C052 /* Assets.xcassets */,
 			);
@@ -90,10 +97,44 @@
 		30288B9E1E34FBB40057AF6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */,
+				30288BA11E3505110057AF6D /* Symbol */,
 				30288B9C1E34FBA90057AF6D /* RootVC.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		30288BA11E3505110057AF6D /* Symbol */ = {
+			isa = PBXGroup;
+			children = (
+				30288BA21E35051C0057AF6D /* Cell */,
+				30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */,
+			);
+			name = Symbol;
+			sourceTree = "<group>";
+		};
+		30288BA21E35051C0057AF6D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				30288BA31E3505270057AF6D /* SymbolCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C0174EE0C9CAD435D4A5190B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03246159523A5271C3ABBABB /* Pods-Otadoya.debug.xcconfig */,
+				C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E971C56C12567B4EC709FF98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FD2921701E30ED8B0042C052 = {
@@ -101,6 +142,8 @@
 			children = (
 				FD29217B1E30ED8C0042C052 /* Otadoya */,
 				FD29217A1E30ED8C0042C052 /* Products */,
+				C0174EE0C9CAD435D4A5190B /* Pods */,
+				E971C56C12567B4EC709FF98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD2921A11E30ED8C0042C052 /* Build configuration list for PBXNativeTarget "Otadoya" */;
 			buildPhases = (
+				B9C59CF7A5088EE2D434C7C4 /* [CP] Check Pods Manifest.lock */,
 				FD2921751E30ED8B0042C052 /* Sources */,
 				FD2921761E30ED8B0042C052 /* Frameworks */,
 				FD2921771E30ED8B0042C052 /* Resources */,
+				30DD0A74342E8EAF6F27FA70 /* [CP] Embed Pods Frameworks */,
+				DCB4D4FBAF5083BD9F73D48A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,11 +235,58 @@
 				FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */,
 				30288B931E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf in Resources */,
 				30288B911E34F6BC0057AF6D /* dzin.wav in Resources */,
-				FD3C30F01E3107450095A127 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30DD0A74342E8EAF6F27FA70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9C59CF7A5088EE2D434C7C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB4D4FBAF5083BD9F73D48A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD2921751E30ED8B0042C052 /* Sources */ = {
@@ -201,10 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */,
+				30288BA41E3505270057AF6D /* SymbolCell.swift in Sources */,
 				30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */,
 				FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */,
 				30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */,
 				FD3C30F41E3117BE0095A127 /* ViewController.swift in Sources */,
+				30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */,
 				30288B9B1E34FB9F0057AF6D /* SymbolsVC.swift in Sources */,
 				FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */,
 			);
@@ -306,8 +401,10 @@
 		};
 		FD2921A21E30ED8C0042C052 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03246159523A5271C3ABBABB /* Pods-Otadoya.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 48PPN2BYYW;
 				INFOPLIST_FILE = Otadoya/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -320,8 +417,10 @@
 		};
 		FD2921A31E30ED8C0042C052 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 48PPN2BYYW;
 				INFOPLIST_FILE = Otadoya/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

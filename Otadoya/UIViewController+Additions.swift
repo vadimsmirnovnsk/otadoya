@@ -1,6 +1,9 @@
+import UIKit
+import SnapKit
+
 extension UIViewController {
 
-	func trs_showViewControllerInView(_ vc: UIViewController, view: UIView, constraints:(_ make: ConstraintMaker) -> Void) {
+	func show(viewController vc: UIViewController, in view: UIView, constraints:(_ make: ConstraintMaker) -> Void) {
 		self.addChildViewController(vc)
 		vc.view.frame = view.bounds
 		view.addSubview(vc.view)
@@ -8,17 +11,17 @@ extension UIViewController {
 		vc.didMove(toParentViewController: self)
 	}
 
-	func trs_showViewControllerInView(_ vc: UIViewController, view: UIView) {
-		self.trs_showViewControllerInView(vc, view: view) { (make) in
+	func show(viewController vc: UIViewController, in view: UIView) {
+		self.show(viewController: vc, in: view) { (make) in
 			make.edges.equalTo(view)
 		}
 	}
 
-	func trs_removeViewController(_ vc: UIViewController) {
-		vc.trs_removeViewControllerFromParentVC()
+	func remove(viewController vc: UIViewController) {
+		vc.removeFromParentVC()
 	}
 
-	func trs_removeViewControllerFromParentVC() {
+	func removeFromParentVC() {
 		self.willMove(toParentViewController: nil)
 		if self.isViewLoaded {
 			self.view.removeFromSuperview()
@@ -26,7 +29,7 @@ extension UIViewController {
 		self.removeFromParentViewController()
 	}
 
-	func trs_isVisible() -> Bool {
+	func isVisible() -> Bool {
 		return self.isViewLoaded && self.view.window != nil
 	}
 

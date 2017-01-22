@@ -68,6 +68,7 @@ class ViewController: UIViewController {
             audioPlayer.play()
         } catch let error {
             print(error.localizedDescription)
-        }    }
+        }
+	}
 
 }
