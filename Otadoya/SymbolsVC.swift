@@ -191,6 +191,10 @@ extension SymbolsVC { // Shake
 			let scrollPosition = UICollectionViewScrollPosition.init(rawValue: 0)
 			self.symbolsCollectionView.scrollToItem(at: randomIndexPath, at: scrollPosition, animated: false)
 			symbolView.removeFromSuperview()
+
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime.init(uptimeNanoseconds: 1000)) {
+				self.shouldWoosh = true
+			}
 		}
 	}
 
