@@ -5,7 +5,7 @@ import AVFoundation
 class SymbolsVC: UIViewController {
 
 	private static let charactersString = "А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я"
-	private static let numbersString = "0,1,2,3,4,5,6,7,8,9"
+	private static let numbersString = "1,2,3,4,5,6,7,8,9,10"
 
 	fileprivate var symbolsCollectionView: UICollectionView!
 	private let characters: Array<String>
@@ -117,7 +117,10 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 			let scrollPosition = UICollectionViewScrollPosition.init(rawValue: 0)
 			self.symbolsCollectionView.scrollToItem(at: index, at: scrollPosition, animated: false)
 			symbolView.removeFromSuperview()
-			self.shouldWoosh = true
+
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime.init(uptimeNanoseconds: 1000)) {
+				self.shouldWoosh = true
+			}
 		}
 	}
 
