@@ -19,7 +19,6 @@
 		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
-		FD3C30F41E3117BE0095A127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C30F31E3117BE0095A127 /* ViewController.swift */; };
 		FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE98BF11E3238E7007D39F6 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		FD29217C1E30ED8C0042C052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD2921831E30ED8C0042C052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD2921881E30ED8C0042C052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD3C30F31E3117BE0095A127 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDE98BF11E3238E7007D39F6 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +160,6 @@
 				30288B941E34F8C70057AF6D /* Utils */,
 				30288B971E34F9690057AF6D /* Supported Files */,
 				FD29217C1E30ED8C0042C052 /* AppDelegate.swift */,
-				FD3C30F31E3117BE0095A127 /* ViewController.swift */,
 				FDE98BF11E3238E7007D39F6 /* Transition.swift */,
 			);
 			path = Otadoya;
@@ -203,7 +200,7 @@
 				TargetAttributes = {
 					FD2921781E30ED8B0042C052 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 48PPN2BYYW;
+						DevelopmentTeam = 695938Y5Q8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -298,7 +295,6 @@
 				30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */,
 				FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */,
 				30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */,
-				FD3C30F41E3117BE0095A127 /* ViewController.swift in Sources */,
 				30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */,
 				30288B9B1E34FB9F0057AF6D /* SymbolsVC.swift in Sources */,
 				FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */,
@@ -405,7 +401,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 48PPN2BYYW;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 695938Y5Q8;
 				INFOPLIST_FILE = Otadoya/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,7 +418,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 48PPN2BYYW;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 695938Y5Q8;
 				INFOPLIST_FILE = Otadoya/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

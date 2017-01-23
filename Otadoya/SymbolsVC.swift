@@ -101,17 +101,7 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 		collectionView.scrollToItem(at: ip, at: scrollPosition, animated: true)
 	}
 
-//	func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//		self.lastIndexPath = indexPath
-//	}
-//
 	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//		print(lastIndexPath)
-//		print(indexPath)
-//
-//		guard let lastIndexPath = self.lastIndexPath else { return }
-//		guard lastIndexPath != indexPath else { return }
-
 		playDzin()
 	}
 
@@ -157,6 +147,7 @@ extension SymbolsVC { // Shake
 	private func playSpringSound() {
 		self.shouldDzin = false
 
+		AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
 		let audioFilePath = Bundle.main.path(forResource: "spring", ofType: "wav")
 		let audioFileUrl = NSURL.fileURL(withPath: audioFilePath!)
 
