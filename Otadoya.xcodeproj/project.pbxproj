@@ -16,6 +16,8 @@
 		30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */; };
 		30288BA41E3505270057AF6D /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288BA31E3505270057AF6D /* SymbolCell.swift */; };
 		30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288BA51E350B4F0057AF6D /* UIFont+Transit.swift */; };
+		302CA6C31E3610CC00EFB35C /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302CA6C21E3610CC00EFB35C /* SymbolView.swift */; };
+		302CA6C51E3613F600EFB35C /* woosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 302CA6C41E3613F600EFB35C /* woosh.wav */; };
 		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		30288BA31E3505270057AF6D /* SymbolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
 		30288BA51E350B4F0057AF6D /* UIFont+Transit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Transit.swift"; sourceTree = "<group>"; };
+		302CA6C21E3610CC00EFB35C /* SymbolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
+		302CA6C41E3613F600EFB35C /* woosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = woosh.wav; sourceTree = "<group>"; };
 		98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otadoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.release.xcconfig"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +82,7 @@
 		30288B981E34F97E0057AF6D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				302CA6C41E3613F600EFB35C /* woosh.wav */,
 				30288B8E1E34F6BC0057AF6D /* dzin.wav */,
 				30288B8F1E34F6BC0057AF6D /* spring.wav */,
 			);
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				30288BA31E3505270057AF6D /* SymbolCell.swift */,
+				302CA6C21E3610CC00EFB35C /* SymbolView.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */,
 				30288B931E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf in Resources */,
 				30288B911E34F6BC0057AF6D /* dzin.wav in Resources */,
+				302CA6C51E3613F600EFB35C /* woosh.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +300,7 @@
 				30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */,
 				30288BA41E3505270057AF6D /* SymbolCell.swift in Sources */,
 				30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */,
+				302CA6C31E3610CC00EFB35C /* SymbolView.swift in Sources */,
 				FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */,
 				30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */,
 				30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */,
@@ -409,6 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.Otadoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -426,6 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Typejournal.Otadoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

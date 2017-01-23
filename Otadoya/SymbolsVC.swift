@@ -19,8 +19,7 @@ class SymbolsVC: UIViewController {
 	]
 
 	fileprivate var audioPlayer = AVAudioPlayer()
-	fileprivate var shouldDzin = true
-	fileprivate var lastIndexPath: IndexPath?
+	fileprivate var shouldWoosh = true
 
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 
@@ -29,7 +28,6 @@ class SymbolsVC: UIViewController {
 
 		super.init(nibName: nil, bundle: nil)
 
-		self.symbolsCollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: self.layout())
 		self.symbols = self.characters + self.numbers
 	}
 
@@ -40,6 +38,7 @@ class SymbolsVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		self.symbolsCollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: self.layout())
 		symbolsCollectionView.backgroundColor = UIColor.conifer
 		symbolsCollectionView.isPagingEnabled = true
 
@@ -67,6 +66,7 @@ extension SymbolsVC { // Private
 
 	fileprivate func layout() -> UICollectionViewFlowLayout {
 		let layout = UICollectionViewFlowLayout.init()
+
 		layout.itemSize = UIScreen.main.bounds.size
 		layout.scrollDirection = .horizontal
 		layout.minimumLineSpacing = 0.0
@@ -89,34 +89,68 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SymbolCell
 
-		cell.contentView.backgroundColor = self.colors[indexPath.row % 4]
-		cell.symbolLabel.text = self.symbols[indexPath.row]
+		cell.symbolView.backgroundColor = self.colors[indexPath.row % 4]
+		cell.symbolView.symbolLabel.text = self.symbols[indexPath.row]
 		return cell
 	}
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let nextItemRow = indexPath.row + 1 == self.symbols.count ? 0 : indexPath.row + 1
 		let ip = IndexPath.init(row: nextItemRow, section: indexPath.section)
-		let scrollPosition = UICollectionViewScrollPosition.init(rawValue: 0)
-		collectionView.scrollToItem(at: ip, at: scrollPosition, animated: true)
+		self.tapTo(index: ip)
+		self.playDzin()
+	}
+
+	private func tapTo(index: IndexPath) {
+		let symbolView = SymbolView.init(frame: UIScreen.main.bounds)
+
+		symbolView.backgroundColor = self.colors[index.row % 4]
+		symbolView.symbolLabel.text = self.symbols[index.row]
+		symbolView.alpha = 0.0
+		self.view.addSubview(symbolView)
+
+		self.shouldWoosh = false
+
+		UIView.animate(withDuration: 0.3, animations: { 
+			symbolView.alpha = 1.0
+		}) { (_) in
+			let scrollPosition = UICollectionViewScrollPosition.init(rawValue: 0)
+			self.symbolsCollectionView.scrollToItem(at: index, at: scrollPosition, animated: false)
+			symbolView.removeFromSuperview()
+			self.shouldWoosh = true
+		}
 	}
 
 	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-		playDzin()
+		playWoosh()
 	}
 
 	func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-		self.shouldDzin = true
+		self.shouldWoosh = true
 	}
 
-	private func playDzin() {
-		guard self.shouldDzin else { return }
+	private func playWoosh() {
+		guard self.shouldWoosh else { return }
 
-		let audioFilePath = Bundle.main.path(forResource: "dzin", ofType: "wav")
+		let audioFilePath = Bundle.main.path(forResource: "woosh", ofType: "wav")
 		let audioFileUrl = NSURL.fileURL(withPath: audioFilePath!)
 
 		do {
 
+			audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
+
+			audioPlayer.prepareToPlay()
+			audioPlayer.play()
+		} catch let error {
+			print(error.localizedDescription)
+		}
+	}
+
+	private func playDzin() {
+		let audioFilePath = Bundle.main.path(forResource: "dzin", ofType: "wav")
+		let audioFileUrl = NSURL.fileURL(withPath: audioFilePath!)
+
+		do {
 			audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
 
 			audioPlayer.prepareToPlay()
@@ -132,10 +166,30 @@ extension SymbolsVC { // Shake
 
 	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if(event?.subtype == UIEventSubtype.motionShake) {
-			self.moveToRandomSymbol()
+			self.didSHake()
 			self.playSpringSound()
         }
     }
+
+	private func didSHake() {
+		let symbolView = SymbolView.init(frame: UIScreen.main.bounds)
+		let randomIndex = Int(arc4random_uniform(UInt32(self.symbols.count - 1)))
+		let randomIndexPath = IndexPath.init(row: randomIndex, section: 0)
+
+		symbolView.backgroundColor = self.colors[randomIndexPath.row % 4]
+		symbolView.symbolLabel.text = self.symbols[randomIndexPath.row]
+		symbolView.transform = CGAffineTransform.init(translationX: 0.0, y: -UIScreen.main.bounds.height)
+		self.view.addSubview(symbolView)
+
+
+		UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4, options: [.curveEaseInOut], animations: { 
+				symbolView.transform = CGAffineTransform.identity
+		}) { (_) in
+			let scrollPosition = UICollectionViewScrollPosition.init(rawValue: 0)
+			self.symbolsCollectionView.scrollToItem(at: randomIndexPath, at: scrollPosition, animated: false)
+			symbolView.removeFromSuperview()
+		}
+	}
 
 	private func moveToRandomSymbol() {
 		let randomIndex = Int(arc4random_uniform(UInt32(self.symbols.count - 1)))
@@ -145,7 +199,7 @@ extension SymbolsVC { // Shake
 	}
 
 	private func playSpringSound() {
-		self.shouldDzin = false
+		self.shouldWoosh = false
 
 		AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
 		let audioFilePath = Bundle.main.path(forResource: "spring", ofType: "wav")
