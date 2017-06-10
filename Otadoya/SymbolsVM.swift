@@ -7,11 +7,12 @@ class SymbolsVM {
 
 	public private(set) var symbolVMs: [SymbolVM] = []
 	public private(set) var currentSymbolIndex: Int = Int.max // Сначала невозможное значение
+	public private(set) var willShowIndex: Int = Int.max // Сначала невозможное значение
 
 	private let colorService: ColorService
 	private let audioService: AudioService
 
-	public init(colorService: ColorService, audioService: AudioService) {
+	public init(colorService: ColorService, audioService: AudioService, fontService: FontService) {
 		self.colorService = colorService
 		self.audioService = audioService
 
@@ -20,7 +21,17 @@ class SymbolsVM {
 		let symbols = characters + numbers
 
 		self.symbolVMs = symbols.enumerated().map { (index, symbol) in
-			return SymbolVM(symbol: symbol, color: colorService.color(for: index))
+			return SymbolVM(symbol: symbol, color: colorService.color(for: index), fontService: fontService)
+		}
+	}
+
+	public func willShowCell(with indexPath: IndexPath) {
+		let index = indexPath.row
+		self.willShowIndex = index
+		let vm = self.symbolVMs[index]
+
+		if self.willShowIndex != self.currentSymbolIndex {
+			vm.didShow()
 		}
 	}
 
@@ -31,7 +42,9 @@ class SymbolsVM {
 		let vm = self.symbolVMs[index]
 		self.currentSymbolIndex = index
 
-		vm.didShow()
+		if self.willShowIndex != self.currentSymbolIndex {
+			vm.didShow()
+		}
 
 		if bySwipe {
 			self.audioService.playWoosh()

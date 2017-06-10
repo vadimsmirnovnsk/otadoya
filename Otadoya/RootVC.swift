@@ -5,7 +5,9 @@ class RootVC: UIViewController {
 	private let symbolsVC: SymbolsVC
 
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-		let symbolsVM = SymbolsVM(colorService: ColorService(), audioService: AudioService())
+		let symbolsVM = SymbolsVM(colorService: ColorService(),
+		                          audioService: AudioService(),
+		                          fontService: FontService())
 		self.symbolsVC = SymbolsVC(viewModel: symbolsVM)
 
 		super.init(nibName: nil, bundle: nil)

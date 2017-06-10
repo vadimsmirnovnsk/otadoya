@@ -43,8 +43,8 @@ class SymbolsVC: UIViewController {
 		}
 
 		// Скажем, что показали первый символ
-		let indexPath = IndexPath(row: 0, section: 0)
-		self.viewModel.didShowCell(with: indexPath, bySwipe: false)
+//		let indexPath = IndexPath(row: 0, section: 0)
+//		self.viewModel.didShowCell(with: indexPath, bySwipe: false)
 	}
 
 	override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -80,6 +80,17 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 		return cell
 	}
 
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+		if let symbolsCell = cell as? SymbolCell {
+			self.viewModel.willShowCell(with: indexPath)
+
+			let cellVM = self.viewModel.symbolVMs[indexPath.row]
+			symbolsCell.viewModel = cellVM
+
+			print(">>> Collection view will show `\(cellVM.symbol)` for \(cellVM.showCounter) time")
+		}
+	}
+
 	func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 		let point = targetContentOffset.pointee
 		let showIndex = Int(point.x / self.view.bounds.width)
@@ -103,6 +114,7 @@ extension SymbolsVC { // Shake
 		let symbolView = SymbolView(frame: UIScreen.main.bounds)
 		let randomIndex = Int(arc4random_uniform(UInt32(self.viewModel.symbolVMs.count - 1)))
 		let randomIndexPath = IndexPath(row: randomIndex, section: 0)
+		self.viewModel.didShowCell(with: randomIndexPath, bySwipe: false)
 		symbolView.viewModel = self.viewModel.symbolVMs[randomIndexPath.row]
 
 		symbolView.transform = CGAffineTransform.init(translationX: 0.0, y: -UIScreen.main.bounds.height)
@@ -113,7 +125,6 @@ extension SymbolsVC { // Shake
 		}) { (_) in
 			let scrollPosition = UICollectionViewScrollPosition(rawValue: 0)
 			self.symbolsCollectionView.scrollToItem(at: randomIndexPath, at: scrollPosition, animated: false)
-			self.viewModel.didShowCell(with: randomIndexPath, bySwipe: false)
 			symbolView.removeFromSuperview()
 		}
 	}

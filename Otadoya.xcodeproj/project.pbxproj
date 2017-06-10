@@ -22,6 +22,7 @@
 		303582961EEC474000C7917B /* SymbolsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582951EEC474000C7917B /* SymbolsVM.swift */; };
 		303582981EEC48A600C7917B /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582971EEC48A600C7917B /* ColorService.swift */; };
 		3035829A1EEC4C0D00C7917B /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582991EEC4C0D00C7917B /* AudioService.swift */; };
+		3035829C1EEC67C300C7917B /* FontService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035829B1EEC67C300C7917B /* FontService.swift */; };
 		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		303582951EEC474000C7917B /* SymbolsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsVM.swift; sourceTree = "<group>"; };
 		303582971EEC48A600C7917B /* ColorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
 		303582991EEC4C0D00C7917B /* AudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		3035829B1EEC67C300C7917B /* FontService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontService.swift; sourceTree = "<group>"; };
 		98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otadoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.release.xcconfig"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				30288B951E34F9050057AF6D /* UIColor+Custom.swift */,
 				303582971EEC48A600C7917B /* ColorService.swift */,
 				303582991EEC4C0D00C7917B /* AudioService.swift */,
+				3035829B1EEC67C300C7917B /* FontService.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3035829C1EEC67C300C7917B /* FontService.swift in Sources */,
 				303582961EEC474000C7917B /* SymbolsVM.swift in Sources */,
 				303582941EEC44AC00C7917B /* SymbolVM.swift in Sources */,
 				30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */,

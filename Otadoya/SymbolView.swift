@@ -33,6 +33,8 @@ class SymbolView: UIView {
 	private func updateContent() {
 		self.symbolLabel.font = self.viewModel?.font
 		self.symbolLabel.text = self.viewModel?.symbol
+
+		print(self.symbolLabel.font!)
 		self.backgroundColor = self.viewModel?.color
 	}
 
