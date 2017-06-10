@@ -2,12 +2,17 @@ import UIKit
 
 class SymbolView: UIView {
 
-	let symbolLabel = UILabel()
+	public var viewModel: SymbolVM? {
+		didSet {
+			self.updateContent()
+		}
+	}
+
+	private let symbolLabel = UILabel()
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
-		self.symbolLabel.font = UIFont.woodFont(ofSize: 200.0)
 		self.symbolLabel.adjustsFontSizeToFitWidth = true
 		self.symbolLabel.textColor = UIColor.white
 		self.symbolLabel.textAlignment = .center
@@ -25,6 +30,11 @@ class SymbolView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	private func updateContent() {
+		self.symbolLabel.font = self.viewModel?.font
+		self.symbolLabel.text = self.viewModel?.symbol
+		self.backgroundColor = self.viewModel?.color
+	}
 
 }
 

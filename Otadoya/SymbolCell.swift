@@ -2,7 +2,13 @@ import UIKit
 
 class SymbolCell: UICollectionViewCell {
 
-	let symbolView = SymbolView(frame: .zero)
+	public var viewModel: SymbolVM? {
+		didSet {
+			self.updateContent()
+		}
+	}
+
+	private let symbolView = SymbolView(frame: .zero)
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -18,6 +24,10 @@ class SymbolCell: UICollectionViewCell {
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+
+	private func updateContent() {
+		self.symbolView.viewModel = self.viewModel
 	}
 
 }

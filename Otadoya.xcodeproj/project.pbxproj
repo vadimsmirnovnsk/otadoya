@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30288B911E34F6BC0057AF6D /* dzin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30288B8E1E34F6BC0057AF6D /* dzin.wav */; };
 		30288B921E34F6BC0057AF6D /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30288B8F1E34F6BC0057AF6D /* spring.wav */; };
 		30288B931E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30288B901E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf */; };
 		30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30288B951E34F9050057AF6D /* UIColor+Custom.swift */; };
@@ -19,6 +18,10 @@
 		302CA6C31E3610CC00EFB35C /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302CA6C21E3610CC00EFB35C /* SymbolView.swift */; };
 		302CA6C51E3613F600EFB35C /* woosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 302CA6C41E3613F600EFB35C /* woosh.wav */; };
 		302CA6C91E36181300EFB35C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302CA6C81E36181300EFB35C /* Launch Screen.storyboard */; };
+		303582941EEC44AC00C7917B /* SymbolVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582931EEC44AC00C7917B /* SymbolVM.swift */; };
+		303582961EEC474000C7917B /* SymbolsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582951EEC474000C7917B /* SymbolsVM.swift */; };
+		303582981EEC48A600C7917B /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582971EEC48A600C7917B /* ColorService.swift */; };
+		3035829A1EEC4C0D00C7917B /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303582991EEC4C0D00C7917B /* AudioService.swift */; };
 		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
@@ -27,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		03246159523A5271C3ABBABB /* Pods-Otadoya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.debug.xcconfig"; sourceTree = "<group>"; };
-		30288B8E1E34F6BC0057AF6D /* dzin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dzin.wav; sourceTree = "<group>"; };
 		30288B8F1E34F6BC0057AF6D /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		30288B901E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WoodkitPrintPro-Letterpress.ttf"; sourceTree = "<group>"; };
 		30288B951E34F9050057AF6D /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
@@ -39,6 +41,10 @@
 		302CA6C21E3610CC00EFB35C /* SymbolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
 		302CA6C41E3613F600EFB35C /* woosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = woosh.wav; sourceTree = "<group>"; };
 		302CA6C81E36181300EFB35C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		303582931EEC44AC00C7917B /* SymbolVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolVM.swift; sourceTree = "<group>"; };
+		303582951EEC474000C7917B /* SymbolsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsVM.swift; sourceTree = "<group>"; };
+		303582971EEC48A600C7917B /* ColorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
+		303582991EEC4C0D00C7917B /* AudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otadoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.release.xcconfig"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +72,8 @@
 				30288BA51E350B4F0057AF6D /* UIFont+Transit.swift */,
 				30288B9F1E34FC0D0057AF6D /* UIViewController+Additions.swift */,
 				30288B951E34F9050057AF6D /* UIColor+Custom.swift */,
+				303582971EEC48A600C7917B /* ColorService.swift */,
+				303582991EEC4C0D00C7917B /* AudioService.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -86,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				302CA6C41E3613F600EFB35C /* woosh.wav */,
-				30288B8E1E34F6BC0057AF6D /* dzin.wav */,
 				30288B8F1E34F6BC0057AF6D /* spring.wav */,
 			);
 			name = Sounds;
@@ -114,6 +121,7 @@
 			children = (
 				30288BA21E35051C0057AF6D /* Cell */,
 				30288B9A1E34FB9F0057AF6D /* SymbolsVC.swift */,
+				303582951EEC474000C7917B /* SymbolsVM.swift */,
 			);
 			name = Symbol;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			children = (
 				30288BA31E3505270057AF6D /* SymbolCell.swift */,
 				302CA6C21E3610CC00EFB35C /* SymbolView.swift */,
+				303582931EEC44AC00C7917B /* SymbolVM.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -210,7 +219,7 @@
 					FD2921781E30ED8B0042C052 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = HJ648XXPWE;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -240,7 +249,6 @@
 				30288B921E34F6BC0057AF6D /* spring.wav in Resources */,
 				FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */,
 				30288B931E34F6BC0057AF6D /* WoodkitPrintPro-Letterpress.ttf in Resources */,
-				30288B911E34F6BC0057AF6D /* dzin.wav in Resources */,
 				302CA6C51E3613F600EFB35C /* woosh.wav in Resources */,
 				302CA6C91E36181300EFB35C /* Launch Screen.storyboard in Resources */,
 			);
@@ -301,13 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303582961EEC474000C7917B /* SymbolsVM.swift in Sources */,
+				303582941EEC44AC00C7917B /* SymbolVM.swift in Sources */,
 				30288B9D1E34FBA90057AF6D /* RootVC.swift in Sources */,
 				30288BA41E3505270057AF6D /* SymbolCell.swift in Sources */,
 				30288BA01E34FC0D0057AF6D /* UIViewController+Additions.swift in Sources */,
 				302CA6C31E3610CC00EFB35C /* SymbolView.swift in Sources */,
 				FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */,
 				30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */,
+				3035829A1EEC4C0D00C7917B /* AudioService.swift in Sources */,
 				30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */,
+				303582981EEC48A600C7917B /* ColorService.swift in Sources */,
 				30288B9B1E34FB9F0057AF6D /* SymbolsVC.swift in Sources */,
 				FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */,
 			);
@@ -412,15 +424,15 @@
 			baseConfigurationReference = 03246159523A5271C3ABBABB /* Pods-Otadoya.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = HJ648XXPWE;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Otadoya/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.steelhoss.otadoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f39b0ea2-7dca-4fc9-95ee-c583d2310d77";
-				PROVISIONING_PROFILE_SPECIFIER = "Otadoya AppStore Distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -431,15 +443,15 @@
 			baseConfigurationReference = C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = HJ648XXPWE;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Otadoya/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.steelhoss.otadoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f39b0ea2-7dca-4fc9-95ee-c583d2310d77";
-				PROVISIONING_PROFILE_SPECIFIER = "Otadoya AppStore Distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
