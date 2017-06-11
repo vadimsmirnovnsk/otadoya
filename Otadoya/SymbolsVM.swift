@@ -4,7 +4,6 @@ class SymbolsVM {
 
 	private static let charactersString = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"
 	//"А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я"
-	private static let numbersString = "" //"1,2,3,4,5,6,7,8,9,10"
 
 	public private(set) var symbolVMs: [SymbolVM] = []
 	public private(set) var currentSymbolIndex: Int = Int.max // Сначала невозможное значение
@@ -18,8 +17,7 @@ class SymbolsVM {
 		self.audioService = audioService
 
 		let characters = SymbolsVM.charactersString.components(separatedBy: ",")
-		let numbers = SymbolsVM.numbersString.components(separatedBy: ",")
-		let symbols = characters + numbers
+		let symbols = characters
 
 		self.symbolVMs = symbols.enumerated().map { (index, symbol) in
 			return SymbolVM(symbol: symbol,
