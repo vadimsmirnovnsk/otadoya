@@ -2,6 +2,12 @@ import AVFoundation
 
 class AudioService {
 
+	static private let modifiers = [
+		"F-",
+		"M-",
+		"KID-",
+	]
+
 	private var audioPlayer = AVAudioPlayer()
 
 	public func playWoosh() {
@@ -12,13 +18,22 @@ class AudioService {
 		self.playFile(named: "spring")
 	}
 
-	public func playSound(for symbol: String) {
+	public func playSound(for symbol: String, modify: Int) {
+		let modifier = self.modifier(for: modify)
+		let fileName = modifier + symbol
 
+		self.playFile(named: fileName)
+	}
+
+	private func modifier(for modify: Int) -> String {
+		let index = modify % AudioService.modifiers.count
+		return AudioService.modifiers[index]
 	}
 
 	private func playFile(named fileName: String) {
-		let audioFilePath = Bundle.main.path(forResource: fileName, ofType: "wav")
-		let audioFileUrl = NSURL.fileURL(withPath: audioFilePath!)
+		guard let audioFilePath = Bundle.main.path(forResource: fileName, ofType: "wav") else { return }
+
+		let audioFileUrl = NSURL.fileURL(withPath: audioFilePath)
 
 		do {
 			self.audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)

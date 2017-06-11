@@ -2,8 +2,9 @@ import UIKit
 
 class SymbolsVM {
 
-	private static let charactersString = "А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я"
-	private static let numbersString = "1,2,3,4,5,6,7,8,9,10"
+	private static let charactersString = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"
+	//"А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я"
+	private static let numbersString = "" //"1,2,3,4,5,6,7,8,9,10"
 
 	public private(set) var symbolVMs: [SymbolVM] = []
 	public private(set) var currentSymbolIndex: Int = Int.max // Сначала невозможное значение
@@ -21,7 +22,10 @@ class SymbolsVM {
 		let symbols = characters + numbers
 
 		self.symbolVMs = symbols.enumerated().map { (index, symbol) in
-			return SymbolVM(symbol: symbol, color: colorService.color(for: index), fontService: fontService)
+			return SymbolVM(symbol: symbol,
+			                color: colorService.color(for: index),
+			                fontService: fontService,
+			                audioService: audioService)
 		}
 	}
 
