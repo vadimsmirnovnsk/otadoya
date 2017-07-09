@@ -123,7 +123,9 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 		for (index, cell) in cells.enumerated() {
 			let symbolCell = cell as! SymbolCell
-			let absoluteOffset = abs((offset - symbolCell.frame.origin.x) / symbolCell.frame.width)
+			var absoluteOffset = abs((offset - symbolCell.frame.origin.x) / symbolCell.frame.width)
+
+			absoluteOffset = absoluteOffset > 1.0 ? 0.0 : absoluteOffset
 
 			print("OFFSET: \(absoluteOffset)")
 			let alpha = 1.0 - absoluteOffset
@@ -150,21 +152,51 @@ extension SymbolsVC { // Shake
 
 	private func showRandomSymbol() {
 		let symbolView = SymbolView(frame: UIScreen.main.bounds)
-		let randomIndex = Int(arc4random_uniform(UInt32(self.viewModel.symbolVMs.count - 1)))
+		let randomIndex = self.randomIndex()
+
 		let randomIndexPath = IndexPath(row: randomIndex, section: 0)
 		self.viewModel.didShowCell(with: randomIndexPath, bySwipe: false)
 		symbolView.viewModel = self.viewModel.symbolVMs[randomIndexPath.row]
 
+		let symbolDropView = SymbolView(frame: UIScreen.main.bounds)
+		symbolDropView.viewModel = self.viewModel.symbolVMs[self.viewModel.currentSymbolIndex]
+		self.view.addSubview(symbolDropView)
+		self.symbolsCollectionView.alpha = 0.0
+
 		symbolView.transform = CGAffineTransform.init(translationX: 0.0, y: -UIScreen.main.bounds.height)
+		symbolView.alpha = 0.0
 		self.view.addSubview(symbolView)
 
-		UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4, options: [.curveEaseInOut], animations: { 
+		self.bgView.backgroundColor = symbolDropView.viewModel?.color
+		self.frontView.backgroundColor = symbolView.viewModel?.color
+		self.bgView.alpha = 1.0
+		self.frontView.alpha = 0.0
+
+		UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.7, options: [.curveEaseInOut], animations: {
 				symbolView.transform = CGAffineTransform.identity
+				symbolDropView.transform = CGAffineTransform.init(translationX: 0.0, y: UIScreen.main.bounds.height)
+				symbolDropView.alpha = 0.0
+				symbolView.alpha = 1.0
+				self.frontView.alpha = 1.0
 		}) { (_) in
 			let scrollPosition = UICollectionViewScrollPosition(rawValue: 0)
 			self.symbolsCollectionView.scrollToItem(at: randomIndexPath, at: scrollPosition, animated: false)
 			symbolView.removeFromSuperview()
+			symbolDropView.removeFromSuperview()
+			self.symbolsCollectionView.alpha = 1.0
 		}
+	}
+
+	private func randomIndex() -> Int {
+		guard self.viewModel.symbolVMs.count > 3 else { return 0 }
+
+		var randomIndex = Int(arc4random_uniform(UInt32(self.viewModel.symbolVMs.count - 1)))
+		// Не показываем соседние буквы
+		if abs(randomIndex - self.viewModel.currentSymbolIndex) < 2 {
+			randomIndex = self.randomIndex()
+		}
+
+		return randomIndex
 	}
 
 }
