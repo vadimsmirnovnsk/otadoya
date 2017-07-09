@@ -4,6 +4,10 @@ import SnapKit
 class SymbolsVC: UIViewController {
 
 	public let viewModel: SymbolsVM
+
+	public let bgView = UIView()
+	public let frontView = UIView()
+
 	fileprivate var symbolsCollectionView: UICollectionView!
 
 	public required init(viewModel: SymbolsVM) {
@@ -26,7 +30,7 @@ class SymbolsVC: UIViewController {
 		super.viewDidLoad()
 
 		self.symbolsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout())
-		symbolsCollectionView.backgroundColor = UIColor.conifer
+		symbolsCollectionView.backgroundColor = UIColor.clear
 		symbolsCollectionView.isPagingEnabled = true
 
 		symbolsCollectionView.delegate = self
@@ -34,9 +38,19 @@ class SymbolsVC: UIViewController {
 
 		symbolsCollectionView.register(SymbolCell.self, forCellWithReuseIdentifier: "cell")
 
+		self.view.addSubview(self.bgView)
+		self.view.addSubview(self.frontView)
 		self.view.addSubview(symbolsCollectionView)
 
 		// Layout
+
+		self.bgView.snp.makeConstraints { (make) in
+			make.edges.equalTo(self.view)
+		}
+
+		self.frontView.snp.makeConstraints { (make) in
+			make.edges.equalTo(self.view)
+		}
 
 		self.symbolsCollectionView.snp.makeConstraints { (make) in
 			make.edges.equalTo(self.view)
@@ -45,6 +59,10 @@ class SymbolsVC: UIViewController {
 		// Скажем, что показали первый символ
 //		let indexPath = IndexPath(row: 0, section: 0)
 //		self.viewModel.didShowCell(with: indexPath, bySwipe: false)
+
+		let bgColor = self.viewModel.symbolVMs[0].color
+		self.bgView.backgroundColor = bgColor
+		self.frontView.backgroundColor = bgColor
 	}
 
 	override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -99,6 +117,26 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 		self.viewModel.didShowCell(with: showIndexPath, bySwipe: true)
 	}
 
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		let offset = scrollView.contentOffset.x
+		let cells = self.symbolsCollectionView.visibleCells
+
+		for (index, cell) in cells.enumerated() {
+			let symbolCell = cell as! SymbolCell
+			let absoluteOffset = abs((offset - symbolCell.frame.origin.x) / symbolCell.frame.width)
+
+			print("OFFSET: \(absoluteOffset)")
+			let alpha = 1.0 - absoluteOffset
+			symbolCell.symbolView.alpha = 1.0 - absoluteOffset
+
+			if index == 0 {
+				self.bgView.backgroundColor = symbolCell.viewModel?.color
+			} else {
+				self.frontView.backgroundColor = symbolCell.viewModel?.color
+				self.frontView.alpha = alpha
+			}
+		}
+	}
 }
 
 extension SymbolsVC { // Shake

@@ -8,11 +8,12 @@ class SymbolCell: UICollectionViewCell {
 		}
 	}
 
-	private let symbolView = SymbolView(frame: .zero)
+	public let symbolView = SymbolView(frame: .zero)
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
+		self.contentView.backgroundColor = UIColor.clear
 		self.contentView.addSubview(self.symbolView)
 
 		// Layout

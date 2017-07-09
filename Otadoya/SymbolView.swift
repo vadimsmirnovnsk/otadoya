@@ -9,17 +9,18 @@ class SymbolView: UIView {
 	}
 
 	private let symbolLabel = UILabel()
-	private let button = UIButton()
+	private let button = SymbolButton()
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
+
+		self.backgroundColor = UIColor.clear
 
 		self.symbolLabel.adjustsFontSizeToFitWidth = true
 		self.symbolLabel.textColor = UIColor.white
 		self.symbolLabel.textAlignment = .center
 		self.addSubview(self.symbolLabel)
 
-		self.button.setImage(UIImage(named: "soundButton"), for: .normal)
 		self.button.addTarget(self, action: #selector(SymbolView.didTapSoundButton), for: .touchUpInside)
 		self.addSubview(button)
 
@@ -43,9 +44,6 @@ class SymbolView: UIView {
 	private func updateContent() {
 		self.symbolLabel.font = self.viewModel?.font
 		self.symbolLabel.text = self.viewModel?.symbol
-
-		print(self.symbolLabel.font!)
-		self.backgroundColor = self.viewModel?.color
 	}
 
 	private dynamic func didTapSoundButton() {

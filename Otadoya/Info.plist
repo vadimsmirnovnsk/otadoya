@@ -25,6 +25,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>WoodkitPrintPro-Letterpress.ttf</string>
+		<string>FTN65.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>

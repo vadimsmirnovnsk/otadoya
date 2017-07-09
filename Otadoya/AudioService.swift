@@ -5,24 +5,25 @@ class AudioService {
 	static private let modifiers = [
 		"F-",
 		"M-",
-		"KID-",
+		"KID2-",
 	]
 
-	private var audioPlayer = AVAudioPlayer()
+	private var audioPlayer: AVAudioPlayer? = nil
+	private var audioQueue = DispatchQueue(label: "xyz.nazabore.otadoya.audio")
 
 	public func playWoosh() {
-		self.playFile(named: "woosh")
+		_ = self.playFile(named: "woosh", of: "wav", playForce: true)
 	}
 
 	public func playSpring() {
-		self.playFile(named: "spring")
+		_ = self.playFile(named: "spring", of: "wav", playForce: true)
 	}
 
-	public func playSound(for symbol: String, modify: Int) {
+	public func playSound(for symbol: String, modify: Int) -> Bool {
 		let modifier = self.modifier(for: modify)
 		let fileName = modifier + symbol
 
-		self.playFile(named: fileName)
+		return self.playFile(named: fileName, of: "mp3", playForce: false)
 	}
 
 	private func modifier(for modify: Int) -> String {
@@ -30,19 +31,24 @@ class AudioService {
 		return AudioService.modifiers[index]
 	}
 
-	private func playFile(named fileName: String) {
-		guard let audioFilePath = Bundle.main.path(forResource: fileName, ofType: "wav") else { return }
+	private func playFile(named fileName: String, of type: String, playForce: Bool) -> Bool {
+		guard let audioFilePath = Bundle.main.path(forResource: fileName, ofType: type) else { return false }
+		if let audioPlayer = self.audioPlayer, audioPlayer.isPlaying, !playForce { return false }
 
-		let audioFileUrl = NSURL.fileURL(withPath: audioFilePath)
+		self.audioQueue.async {
+			let audioFileUrl = NSURL.fileURL(withPath: audioFilePath)
 
-		do {
-			self.audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
+			do {
+				self.audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
 
-			self.audioPlayer.prepareToPlay()
-			self.audioPlayer.play()
-		} catch let error {
-			print(error.localizedDescription)
+				self.audioPlayer?.prepareToPlay()
+				self.audioPlayer?.play()
+			} catch let error {
+				print(error.localizedDescription)
+			}
 		}
+
+		return true
 	}
 
 }

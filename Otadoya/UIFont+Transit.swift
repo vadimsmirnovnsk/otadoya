@@ -2,6 +2,10 @@ import UIKit
 
 extension UIFont {
 
+	static func classicFont(of size: CGFloat) -> UIFont {
+		return UIFont(name: "FuturaPT-Demi", size: size)!
+	}
+
 	static func woodFont(of size: CGFloat) -> UIFont {
 		return UIFont(name: "WoodkitPrintPro-Letterpress", size: size)!
 	}

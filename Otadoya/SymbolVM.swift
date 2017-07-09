@@ -26,9 +26,11 @@ class SymbolVM {
 	}
 
 	public func didTapSoundButton() {
-		self.audioService.playSound(for: self.symbol, modify: playSoundCounter)
+		let playedSuccessfully = self.audioService.playSound(for: self.symbol, modify: playSoundCounter)
 
-		self.playSoundCounter = self.playSoundCounter.advanced(by: 1)
+		if playedSuccessfully {
+			self.playSoundCounter = self.playSoundCounter.advanced(by: 1)
+		}
 	}
 
 }
