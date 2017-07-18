@@ -19,6 +19,10 @@ class AudioService {
 		_ = self.playFile(named: "spring", of: "wav", playForce: true)
 	}
 
+	public func playDzin() {
+		_ = self.playFile(named: "dzin", of: "wav", playForce: true)
+	}
+
 	public func playSound(for symbol: String, modify: Int) -> Bool {
 		let modifier = self.modifier(for: modify)
 		let fileName = modifier + symbol

@@ -103,6 +103,7 @@
 		30964FC31F1119150096B0EF /* M-Y.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30964F751F1119150096B0EF /* M-Y.mp3 */; };
 		30964FC41F1119150096B0EF /* M-Z.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30964F761F1119150096B0EF /* M-Z.mp3 */; };
 		30964FC61F111A5C0096B0EF /* SymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30964FC51F111A5C0096B0EF /* SymbolButton.swift */; };
+		30A460F71F1E7CB300E05B7B /* dzin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30A460F61F1E7CB300E05B7B /* dzin.wav */; };
 		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
@@ -207,6 +208,7 @@
 		30964F751F1119150096B0EF /* M-Y.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "M-Y.mp3"; sourceTree = "<group>"; };
 		30964F761F1119150096B0EF /* M-Z.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "M-Z.mp3"; sourceTree = "<group>"; };
 		30964FC51F111A5C0096B0EF /* SymbolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolButton.swift; sourceTree = "<group>"; };
+		30A460F61F1E7CB300E05B7B /* dzin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dzin.wav; sourceTree = "<group>"; };
 		98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otadoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.release.xcconfig"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +260,7 @@
 			children = (
 				30E599F41EED4E520028099C /* English */,
 				302CA6C41E3613F600EFB35C /* woosh.wav */,
+				30A460F61F1E7CB300E05B7B /* dzin.wav */,
 				30288B8F1E34F6BC0057AF6D /* spring.wav */,
 			);
 			name = Sounds;
@@ -502,6 +505,7 @@
 				30288B921E34F6BC0057AF6D /* spring.wav in Resources */,
 				30964F811F1119150096B0EF /* F-K.mp3 in Resources */,
 				30964F911F1119150096B0EF /* KID2-A.mp3 in Resources */,
+				30A460F71F1E7CB300E05B7B /* dzin.wav in Resources */,
 				30964FB01F1119150096B0EF /* M-F.mp3 in Resources */,
 				30964F9F1F1119150096B0EF /* KID2-O.mp3 in Resources */,
 				30964FB61F1119150096B0EF /* M-L.mp3 in Resources */,

@@ -238,10 +238,13 @@ extension SymbolsVC { // Shake and dzin
 		self.bgView.alpha = 1.0
 		self.frontView.alpha = 0.0
 
+		UIView.animate(withDuration: 0.3) { 
+			currentSymbolView.alpha = 0.0
+		}
+
 		UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.7, options: [.curveEaseInOut], animations: {
 			nextSymbolView.transform = CGAffineTransform.identity
 
-			currentSymbolView.alpha = 0.0
 			nextSymbolView.alpha = 1.0
 			self.frontView.alpha = 1.0
 		}) { (_) in

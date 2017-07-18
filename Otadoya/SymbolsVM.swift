@@ -58,7 +58,7 @@ class SymbolsVM {
 	}
 
 	public func didTapSymbol() {
-		self.audioService.playWoosh()
+		self.audioService.playDzin()
 	}
 
 }
