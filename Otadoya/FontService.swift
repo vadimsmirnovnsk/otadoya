@@ -6,11 +6,11 @@ class FontService {
 
 	init() {
 		self.fonts = [
+			UIFont.woodFontAlternate(of: 200, alternate: 4),
 			UIFont.woodFontAlternate(of: 200, alternate: 2),
 			UIFont.classicFont(of: 250),
 			UIFont.woodFont(of: 200),
 			UIFont.woodFontAlternate(of: 200, alternate: 3),
-			UIFont.woodFontAlternate(of: 200, alternate: 4),
 		]
 	}
 

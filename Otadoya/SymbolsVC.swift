@@ -8,6 +8,8 @@ class SymbolsVC: UIViewController {
 	public let bgView = UIView()
 	public let frontView = UIView()
 
+	fileprivate var isAnimating = false
+
 	fileprivate var symbolsCollectionView: UICollectionView!
 
 	public required init(viewModel: SymbolsVM) {
@@ -55,10 +57,6 @@ class SymbolsVC: UIViewController {
 		self.symbolsCollectionView.snp.makeConstraints { (make) in
 			make.edges.equalTo(self.view)
 		}
-
-		// Скажем, что показали первый символ
-//		let indexPath = IndexPath(row: 0, section: 0)
-//		self.viewModel.didShowCell(with: indexPath, bySwipe: false)
 
 		let bgColor = self.viewModel.symbolVMs[0].color
 		self.bgView.backgroundColor = bgColor
@@ -118,6 +116,7 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 	}
 
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		
 		let offset = scrollView.contentOffset.x
 		let cells = self.symbolsCollectionView.visibleCells
 
@@ -139,58 +138,134 @@ extension SymbolsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 			}
 		}
 	}
+
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if !self.isAnimating {
+			self.isAnimating = true
+
+			self.viewModel.didTapSymbol()
+			self.showRandomSymbol(byShake: false)
+		}
+	}
 }
 
-extension SymbolsVC { // Shake
+extension SymbolsVC { // Shake and dzin
 
 	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if(event?.subtype == UIEventSubtype.motionShake) {
+        if event?.subtype == UIEventSubtype.motionShake, !self.isAnimating {
+			self.isAnimating = true
+
 			self.viewModel.didCatchShakeMotion()
-			self.showRandomSymbol()
+			self.showRandomSymbol(byShake: true)
         }
     }
 
-	private func showRandomSymbol() {
-		let symbolView = SymbolView(frame: UIScreen.main.bounds)
+	fileprivate func showRandomSymbol(byShake: Bool) {
+		let nextSymbolView = SymbolView(frame: UIScreen.main.bounds)
 		let randomIndex = self.randomIndex()
+
+		let currentSymbolView = SymbolView(frame: UIScreen.main.bounds)
+		let currentSymbolIndex = self.viewModel.currentSymbolIndex == Int.max ? 0 : self.viewModel.currentSymbolIndex
+		currentSymbolView.viewModel = self.viewModel.symbolVMs[currentSymbolIndex]
 
 		let randomIndexPath = IndexPath(row: randomIndex, section: 0)
 		self.viewModel.didShowCell(with: randomIndexPath, bySwipe: false)
-		symbolView.viewModel = self.viewModel.symbolVMs[randomIndexPath.row]
+		nextSymbolView.viewModel = self.viewModel.symbolVMs[randomIndexPath.row]
 
-		let symbolDropView = SymbolView(frame: UIScreen.main.bounds)
-		symbolDropView.viewModel = self.viewModel.symbolVMs[self.viewModel.currentSymbolIndex]
-		self.view.addSubview(symbolDropView)
+		self.view.addSubview(nextSymbolView)
+		self.view.addSubview(currentSymbolView)
+
+		if byShake {
+			self.showRandomSymbolByShake(nextSymbolView: nextSymbolView,
+			                             currentSymbolView: currentSymbolView,
+			                             randomIndexPath: randomIndexPath)
+		} else {
+			self.showRandomSymbolByDzin(nextSymbolView: nextSymbolView,
+			                            currentSymbolView: currentSymbolView,
+			                            randomIndexPath: randomIndexPath)
+		}
+
+	}
+
+	private func showRandomSymbolByShake(nextSymbolView: SymbolView,
+	                                     currentSymbolView: SymbolView,
+	                                     randomIndexPath: IndexPath) {
 		self.symbolsCollectionView.alpha = 0.0
 
-		symbolView.transform = CGAffineTransform.init(translationX: 0.0, y: -UIScreen.main.bounds.height)
-		symbolView.alpha = 0.0
-		self.view.addSubview(symbolView)
+		nextSymbolView.transform = CGAffineTransform.init(translationX: 0.0, y: -UIScreen.main.bounds.height)
+		nextSymbolView.alpha = 0.0
+		self.view.addSubview(currentSymbolView)
 
-		self.bgView.backgroundColor = symbolDropView.viewModel?.color
-		self.frontView.backgroundColor = symbolView.viewModel?.color
+		self.bgView.backgroundColor = currentSymbolView.viewModel?.color
+		self.frontView.backgroundColor = nextSymbolView.viewModel?.color
 		self.bgView.alpha = 1.0
 		self.frontView.alpha = 0.0
 
 		UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.7, options: [.curveEaseInOut], animations: {
-				symbolView.transform = CGAffineTransform.identity
-				symbolDropView.transform = CGAffineTransform.init(translationX: 0.0, y: UIScreen.main.bounds.height)
-				symbolDropView.alpha = 0.0
-				symbolView.alpha = 1.0
-				self.frontView.alpha = 1.0
+			nextSymbolView.transform = CGAffineTransform.identity
+			currentSymbolView.transform = CGAffineTransform.init(translationX: 0.0, y: UIScreen.main.bounds.height)
+			nextSymbolView.alpha = 1.0
+			currentSymbolView.alpha = 0.0
+			self.frontView.alpha = 1.0
 		}) { (_) in
 			let scrollPosition = UICollectionViewScrollPosition(rawValue: 0)
+
 			self.symbolsCollectionView.scrollToItem(at: randomIndexPath, at: scrollPosition, animated: false)
-			symbolView.removeFromSuperview()
-			symbolDropView.removeFromSuperview()
+			nextSymbolView.removeFromSuperview()
+			currentSymbolView.removeFromSuperview()
 			self.symbolsCollectionView.alpha = 1.0
+
+			// Фикс бага с пропадающим символом
+			DispatchQueue.main.async { [weak self] in
+				guard let this = self else { return }
+
+				this.scrollViewDidScroll(this.symbolsCollectionView)
+				this.isAnimating = false
+			}
+		}
+	}
+
+	private func showRandomSymbolByDzin(nextSymbolView: SymbolView,
+										currentSymbolView: SymbolView,
+										randomIndexPath: IndexPath) {
+		self.symbolsCollectionView.alpha = 0.0
+
+		nextSymbolView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+		nextSymbolView.alpha = 0.0
+
+		self.bgView.backgroundColor = currentSymbolView.viewModel?.color
+		self.frontView.backgroundColor = nextSymbolView.viewModel?.color
+		self.bgView.alpha = 1.0
+		self.frontView.alpha = 0.0
+
+		UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.7, options: [.curveEaseInOut], animations: {
+			nextSymbolView.transform = CGAffineTransform.identity
+
+			currentSymbolView.alpha = 0.0
+			nextSymbolView.alpha = 1.0
+			self.frontView.alpha = 1.0
+		}) { (_) in
+			let scrollPosition = UICollectionViewScrollPosition(rawValue: 0)
+
+			self.symbolsCollectionView.scrollToItem(at: randomIndexPath, at: scrollPosition, animated: false)
+			currentSymbolView.removeFromSuperview()
+			nextSymbolView.removeFromSuperview()
+			self.symbolsCollectionView.alpha = 1.0
+
+			// Фикс бага с пропадающим символом
+			DispatchQueue.main.async { [weak self] in
+				guard let this = self else { return }
+
+				this.scrollViewDidScroll(this.symbolsCollectionView)
+				this.isAnimating = false
+			}
 		}
 	}
 
 	private func randomIndex() -> Int {
 		guard self.viewModel.symbolVMs.count > 3 else { return 0 }
 
-		var randomIndex = Int(arc4random_uniform(UInt32(self.viewModel.symbolVMs.count - 1)))
+		var randomIndex = Int(arc4random_uniform(UInt32(self.viewModel.symbolVMs.count)))
 		// Не показываем соседние буквы
 		if abs(randomIndex - self.viewModel.currentSymbolIndex) < 2 {
 			randomIndex = self.randomIndex()

@@ -57,4 +57,8 @@ class SymbolsVM {
 		self.audioService.playSpring()
 	}
 
+	public func didTapSymbol() {
+		self.audioService.playWoosh()
+	}
+
 }
