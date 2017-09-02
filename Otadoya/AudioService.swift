@@ -1,11 +1,11 @@
 import AVFoundation
 
-class AudioService {
+class AudioService: NSObject {
 
 	static private let modifiers = [
+		"KID2-",
 		"F-",
 		"M-",
-		"KID2-",
 	]
 
 	private var audioPlayer: AVAudioPlayer? = nil
@@ -27,7 +27,13 @@ class AudioService {
 		let modifier = self.modifier(for: modify)
 		let fileName = modifier + symbol
 
-		return self.playFile(named: fileName, of: "mp3", playForce: false)
+		let isPlaying = self.playFile(named: fileName, of: "mp3", playForce: false)
+		if isPlaying {
+			NotificationCenter.default.post(name: NSNotification.Name(rawValue: "didStartPlayingSound"),
+			                                object: nil)
+		}
+
+		return isPlaying
 	}
 
 	private func modifier(for modify: Int) -> String {
@@ -45,6 +51,7 @@ class AudioService {
 			do {
 				self.audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
 
+				self.audioPlayer?.delegate = self
 				self.audioPlayer?.prepareToPlay()
 				self.audioPlayer?.play()
 			} catch let error {
@@ -53,6 +60,14 @@ class AudioService {
 		}
 
 		return true
+	}
+
+}
+
+extension AudioService: AVAudioPlayerDelegate {
+
+	func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "didStopPlayingSound"), object: nil)
 	}
 
 }

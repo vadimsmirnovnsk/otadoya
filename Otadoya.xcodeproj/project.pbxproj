@@ -104,6 +104,7 @@
 		30964FC41F1119150096B0EF /* M-Z.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30964F761F1119150096B0EF /* M-Z.mp3 */; };
 		30964FC61F111A5C0096B0EF /* SymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30964FC51F111A5C0096B0EF /* SymbolButton.swift */; };
 		30A460F71F1E7CB300E05B7B /* dzin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30A460F61F1E7CB300E05B7B /* dzin.wav */; };
+		30DD52851F5A9E2E00C02E75 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD52841F5A9E2E00C02E75 /* AnimationView.swift */; };
 		51DD9382621C678EB32B9224 /* Pods_Otadoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */; };
 		FD29217D1E30ED8C0042C052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29217C1E30ED8C0042C052 /* AppDelegate.swift */; };
 		FD2921841E30ED8C0042C052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2921831E30ED8C0042C052 /* Assets.xcassets */; };
@@ -209,6 +210,7 @@
 		30964F761F1119150096B0EF /* M-Z.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "M-Z.mp3"; sourceTree = "<group>"; };
 		30964FC51F111A5C0096B0EF /* SymbolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolButton.swift; sourceTree = "<group>"; };
 		30A460F61F1E7CB300E05B7B /* dzin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dzin.wav; sourceTree = "<group>"; };
+		30DD52841F5A9E2E00C02E75 /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		98E79E99E323A0C95A90D411 /* Pods_Otadoya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otadoya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439702BFEDF5ABC1EB3B7FA /* Pods-Otadoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otadoya.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otadoya/Pods-Otadoya.release.xcconfig"; sourceTree = "<group>"; };
 		FD2921791E30ED8C0042C052 /* Otadoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otadoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +302,7 @@
 				30288BA31E3505270057AF6D /* SymbolCell.swift */,
 				302CA6C21E3610CC00EFB35C /* SymbolView.swift */,
 				30964FC51F111A5C0096B0EF /* SymbolButton.swift */,
+				30DD52841F5A9E2E00C02E75 /* AnimationView.swift */,
 				303582931EEC44AC00C7917B /* SymbolVM.swift */,
 			);
 			name = Cell;
@@ -652,6 +655,7 @@
 				302CA6C31E3610CC00EFB35C /* SymbolView.swift in Sources */,
 				FDE98BF21E3238E7007D39F6 /* Transition.swift in Sources */,
 				30288B961E34F9050057AF6D /* UIColor+Custom.swift in Sources */,
+				30DD52851F5A9E2E00C02E75 /* AnimationView.swift in Sources */,
 				3035829A1EEC4C0D00C7917B /* AudioService.swift in Sources */,
 				30288BA61E350B4F0057AF6D /* UIFont+Transit.swift in Sources */,
 				303582981EEC48A600C7917B /* ColorService.swift in Sources */,

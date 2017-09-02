@@ -4,6 +4,7 @@ class SymbolVM {
 
 	public let symbol: String
 	public let color: UIColor
+	public let canPlaySound: Bool
 	public private(set) var font: UIFont
 
 	public private(set) var showCounter = 0
@@ -12,12 +13,17 @@ class SymbolVM {
 	private let fontService: FontService
 	private let audioService: AudioService
 
-	public init(symbol: String, color: UIColor, fontService: FontService, audioService: AudioService) {
+	public init(symbol: String,
+	            color: UIColor,
+	            fontService: FontService,
+	            audioService: AudioService,
+	            canPlaySound: Bool = false) {
 		self.symbol = symbol
 		self.color = color
 		self.fontService = fontService
 		self.audioService = audioService
-		self.font = UIFont.woodFont(of: 200)
+		self.font = UIFont.woodFont(of: 240)
+		self.canPlaySound = canPlaySound
 	}
 
 	public func didShow() {
