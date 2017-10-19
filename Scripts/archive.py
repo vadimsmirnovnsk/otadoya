@@ -11,13 +11,20 @@ logging.basicConfig(level=logging.INFO,
 script_dir = os.path.dirname(os.path.realpath(__file__))
 root_dir = os.path.join(script_dir, "../")
 build_dir = os.path.join(root_dir, "Build")
-archive_path = os.path.join(build_dir, "archive")
+
+
+plist_path = os.path.join(root_dir, "Otadoya/Info.plist")
+buildNumber = int(subprocess.check_output(["/usr/libexec/PlistBuddy", "-c", "Print CFBundleVersion", plist_path]))
+archive_name = "archive_{}".format(buildNumber + 1)
+archive_path = os.path.join(build_dir, archive_name)
+archive_full_path = archive_path + ".xcarchive"
+
 team_id = "HJ648XXPWE"
 app_id = "1198165440"
 scheme = "Otadoya"
 ipa_name = "Otadoya.ipa"
-plist_path = os.path.join(root_dir, "Otadoya/Info.plist")
 workspace = os.path.join(root_dir, "Otadoya.xcworkspace")
+fabric_api_key = "9ad84669556850a70931e6086e1f42b48101c815"
 
 def main():
     parser = create_parser()
@@ -26,14 +33,16 @@ def main():
     logging.debug("Passed arguments: {}".format(args))
     incement_build()
     create_archive()
+    upload_dsym()
     create_ipa()
     upload_ipa(args)
 
 def incement_build():
-    buildNumber = subprocess.check_output(["/usr/libexec/PlistBuddy", "-c", "Print CFBundleVersion", plist_path])
-    buildNumber = int(buildNumber) + 1
-    logging.info("Increment build to: {}".format(buildNumber))
-    subprocess.check_call(["/usr/libexec/PlistBuddy", "-c", "Set CFBundleVersion {}".format(buildNumber), plist_path])
+    new_build_number = buildNumber + 1
+    logging.info("Increment build to: {}".format(new_build_number))
+    logging.info("Archive new path: {}".format(archive_full_path))
+    
+    subprocess.check_call(["/usr/libexec/PlistBuddy", "-c", "Set CFBundleVersion {}".format(new_build_number), plist_path])
 
 
 def create_parser():
@@ -52,8 +61,18 @@ def create_archive():
         "-scheme", scheme,
         ])
 
+def upload_dsym():
+    subprocess.check_call([
+        os.path.join(root_dir, "Pods/Fabric/upload-symbols"),
+        "--api-key", fabric_api_key,
+        "--platform", "ios",
+        "--debug",
+        "--", os.path.join(archive_full_path, "dSYMs")
+        ])
+
 def upload_ipa(args):
     ipa_path = os.path.join(build_dir, ipa_name)
+    logging.info("Upload ipa: {}".format(ipa_path))
     subprocess.check_call([
         "/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Support/altool", 
         "--upload-app",
@@ -84,7 +103,7 @@ def create_ipa():
     subprocess.check_call([
         "xcodebuild", 
         "-exportArchive", 
-        "-archivePath", archive_path + ".xcarchive", 
+        "-archivePath", archive_full_path, 
         "-exportOptionsPlist", plist_path,
         "-exportPath", os.path.join(root_dir, "Build/"),
         ])
